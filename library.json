@@ -2,7 +2,7 @@
     "name": "DAC7311",
     "version": "1.0.0",
     "description": "DAC7311 Library for Arduino",
-    "keywords": "dac7311",
+    "keywords": "DAC7311,DAC,Digital-to-Analog Converter,Arduino",
     "repository": {
         "type": "git",
         "url": "https://github.com/cotechworks/dac7311.git"
