@@ -1,0 +1,28 @@
+##########################################
+# Datatypes (KEYWORD1)
+##########################################
+
+dac7311     KEYWORD1    dac7311
+
+##########################################
+#  Methods and Functions (KEYWORD2)
+##########################################
+
+begin             KEYWORD2
+write             KEYWORD2
+setPowerDownMode  KEYWORD2
+ 
+##########################################
+#  Instances (KEYWORD2)
+##########################################
+
+
+
+##########################################
+  Constants (LITERAL1)
+##########################################
+
+DAC7311_NORMAL          LITERAL1
+DAC7311_1K_TO_GND       LITERAL1
+DAC7311_100K_TO_GND     LITERAL1
+DAC7311_HIGH_IMPEDANCE  LITERAL1
