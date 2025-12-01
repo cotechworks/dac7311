@@ -3,11 +3,22 @@
 dac7311 myDAC(D7, 4000000);  // CSピンをD7、クロックスピードを4MHzに設定してインスタンス化
 
 void setup() {
+  Serial.begin(115200);
+
   myDAC.begin();                           // DACの初期化
   myDAC.setPowerDownMode(DAC7311_NORMAL);  // パワーダウンモードを設定(write()実行時に反映)
+  myDAC.write(0);                          // 電圧を0Vに設定
 }
 
 void loop() {
-  myDAC.write(2048);  // 出力電圧をVrefの半分に設定
-  delay(1000);        // 1秒待機
+  if (Serial.available() > 0) {  //受信データがある場合
+    delay(10);
+    int val = Serial.parseInt();  // 文字列データを数値に変換
+
+    while (Serial.available() > 0) {  // 受信バッファクリア
+      char t = Serial.read();
+    }
+
+    myDAC.write(val);  // 出力電圧を設定}
+  }
 }
